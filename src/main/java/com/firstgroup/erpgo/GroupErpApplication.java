@@ -1,11 +1,11 @@
-package com.firstgroup.grouperp;
+package com.firstgroup.erpgo;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.firstgroup.grouperp.mapper")
+@MapperScan("com.firstgroup.erpgo.mapper")
 public class GroupErpApplication {
 
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.firstgroup.grouperp.model.request;
+package com.firstgroup.erpgo.model.request;
 
 import lombok.Data;
 

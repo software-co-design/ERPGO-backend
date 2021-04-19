@@ -1,6 +1,6 @@
-package com.firstgroup.grouperp.utils;
+package com.firstgroup.erpgo.utils;
 
-import com.firstgroup.grouperp.model.entity.User;
+import com.firstgroup.erpgo.model.entity.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

@@ -1,4 +1,4 @@
-package com.firstgroup.grouperp.utils;
+package com.firstgroup.erpgo.utils;
 
 import java.security.MessageDigest;
 

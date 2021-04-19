@@ -1,4 +1,4 @@
-package com.firstgroup.grouperp.model.entity;
+package com.firstgroup.erpgo.model.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;

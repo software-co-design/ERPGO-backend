@@ -1,8 +1,8 @@
-package com.firstgroup.grouperp.controller;
+package com.firstgroup.erpgo.controller;
 
-import com.firstgroup.grouperp.model.request.LoginRequest;
-import com.firstgroup.grouperp.service.UserService;
-import com.firstgroup.grouperp.utils.JsonData;
+import com.firstgroup.erpgo.model.request.LoginRequest;
+import com.firstgroup.erpgo.service.UserService;
+import com.firstgroup.erpgo.utils.JsonData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

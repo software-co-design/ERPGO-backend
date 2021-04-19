@@ -1,11 +1,10 @@
-package com.firstgroup.grouperp.service.impl;
+package com.firstgroup.erpgo.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.firstgroup.grouperp.mapper.UserMapper;
-import com.firstgroup.grouperp.model.entity.User;
-import com.firstgroup.grouperp.service.UserService;
-import com.firstgroup.grouperp.utils.CommonUtils;
-import com.firstgroup.grouperp.utils.JWTUtils;
+import com.firstgroup.erpgo.mapper.UserMapper;
+import com.firstgroup.erpgo.model.entity.User;
+import com.firstgroup.erpgo.service.UserService;
+import com.firstgroup.erpgo.utils.JWTUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
