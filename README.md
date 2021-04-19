@@ -1,24 +1,28 @@
-# 开发环境安装步骤：
+# ERPGO 项目使用说明
+
+### 开发环境初始配置
 
 新建一个文件夹 ERPGO 作为你的本地仓库
 
 初始化本地仓库
 
-```plain
+```bash
 git init
 ```
 与本远程仓库建立连接
 
-```basic
+```bash
 git add origin https://github.com/Extreme-S/ERPGO-backend.git
 ```
 抓取所有远程分支
 
-```plain
+```bash
 git fetch
 ```
 检出你所要用的分支，本项目 ERPGO 以 main 为主分支
 
-```plain
+```bash
 git checkout -b main origin/main
 ```
+
+到这一步就可以看到你的 ERPGO 文件夹下已经获取到代码了，打开IDEA开始编辑吧
