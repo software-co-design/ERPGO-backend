@@ -12,7 +12,7 @@ git init
 与本远程仓库建立连接
 
 ```bash
-git add origin https://github.com/Extreme-S/ERPGO-backend.git
+git remote add origin https://github.com/software-co-design/ERPGO-backend.git
 ```
 抓取所有远程分支
 
