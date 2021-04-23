@@ -2,9 +2,7 @@
 
 ### 环境配置：
 
-git环境，自行下载配置，
-
-[参考]: https://blog.csdn.net/cat_hate_fish/article/details/107580495?spm=1001.2014.3001.5501
+git环境，自行下载配置
 
 
 
@@ -25,6 +23,7 @@ git init
 git remote add origin https://github.com/software-co-design/ERPGO-backend.git
 ```
 抓取所有远程分支，这一步会下载所有分支，会比较慢，
+
 网络波动较大的时候可能会失败，多试几次直到成功
 
 ```bash
@@ -36,14 +35,31 @@ git fetch
 git branch -a
 ```
 
-检出你所要用的分支，本项目 ERPGO-backend 以 main 为主分支，所以检出 main 分支
+检出你所要用的分支，
+
+本项目 ERPGO-backend 以 main 为主分支，所以检出 origin/main 分支
+
+lyw可以换成你名字的缩写，作为仓库中你的分支的名称
 
 ```bash
-git checkout -b main origin/main
+git checkout -b lyw origin/main
 ```
 
-到这一步就可以看到你的 ERPGO 文件夹下已经获取到代码了，打开IDEA开始编辑吧
+到这一步就可以看到你的 ERPGO-backend 文件夹下已经获取到代码了
 
 ### 代码提交：
 
-//TODO
+将 工作区 的所有更改添加到 暂存区
+
+``` bash
+git add .
+```
+
+将 暂存区 添加的更改提交到 本地仓库，
+
+message一般填的是这次提交做了哪些更改
+
+``` bash
+git commit -m "message"
+```
+
