@@ -13,18 +13,24 @@ import java.util.Date;
 public class User {
     private Integer id;
 
-    private String name;
+    private String username;
 
     @JsonIgnore
     private String pwd;
 
-    @JsonProperty("head_img")
-    private String headImg;
+    private String realName;
+
+//    @JsonProperty("head_img")
+//    private String headImg;
+
+    private int Rank;//职称
 
     private String phone;
 
-    @JsonProperty("create_time")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    private Date createTime;
+    private String email;
+
+//    @JsonProperty("create_time")
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+//    private Date createTime;
 
 }
