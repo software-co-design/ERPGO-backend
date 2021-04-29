@@ -2,9 +2,7 @@
 
 ## 环境配置：
 
-git环境，自行下载配置
-
-(或者下载 GitDesktop，这个有可视化操作界面，简单上手，但不建议使用，谨慎选择)
+git环境，自行下载配置 (不建议使用  GitDesktop)
 
 ## 本地仓库初始化配置及代码获取：
 
@@ -85,7 +83,7 @@ $ git push
 
 1.New pull request
 
-![image-20210429115442424](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210429115442424.png)
+![image-20210429115442424](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210429115442424.png?lastModify=1619675799)
 
 2.确认合并的分支信息，是从你的工作分支合并到 main 分支
 
