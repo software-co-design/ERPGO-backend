@@ -50,13 +50,13 @@ $ git checkout -b lyw origin/main
 将 工作区 的所有更改添加到 暂存区
 
 ``` bash
-git add .
+$ git add .
 ```
 
 将 暂存区 添加的更改提交到 本地仓库，message一般填的是这次提交做了哪些更改，比如“完成登陆功能”
 
 ``` bash
-git commit -m "message"
+$ git commit -m "message"
 ```
 
 将本地仓库的代码推送到远程仓库，**确定当前分支是你要推送的分支**
@@ -85,11 +85,11 @@ $ git push
 
 1.New pull request
 
-![image-20210429115442424](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210429115442424.png)
+![image-20210429115442424](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210429115442424.png)
 
 2.确认合并的分支信息，是从你的工作分支合并到 main 分支
 
-![image-20210429115613737](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210429115613737.png)
+![image-20210429115613737](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210429115613737.png)
 
 
 
