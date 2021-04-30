@@ -101,7 +101,8 @@ $ git checkout -b lyw-0501
 
 ![image](https://user-images.githubusercontent.com/58586834/116671888-11b27100-a9d4-11eb-90b8-4d8e3da9cf40.png)
 
-2.
+2.确认请求合并信息，从你的分支向main分支合并，点击create pull request即可
+![image](https://user-images.githubusercontent.com/58586834/116672407-bc2a9400-a9d4-11eb-902e-a01a2abb7d3d.png)
 
 
 
