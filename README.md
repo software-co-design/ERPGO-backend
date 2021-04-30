@@ -1,6 +1,5 @@
 # ERPGO 系统开发使用说明
 
-[TOC]
 
 ## 环境配置：
 
@@ -98,9 +97,11 @@ $ git checkout -b lyw-0501
 
 
 ## 创建 Pull Request 合并你的分支
+1.new pull request
 
+![image](https://user-images.githubusercontent.com/58586834/116671888-11b27100-a9d4-11eb-90b8-4d8e3da9cf40.png)
 
-
+2.
 
 
 
