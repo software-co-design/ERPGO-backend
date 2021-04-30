@@ -75,7 +75,29 @@ $ git push
 
 ## 保持好习惯，每天编码前从仓库拉取最新代码
 
-//TODO
+切换到主分支main
+
+``` bash
+$ git checkout main
+```
+
+更新本地的主分支main
+
+``` bash
+$ git pull
+```
+
+切换到你的工作分支，lyw换成你的工作分支名
+
+``` bash
+$ git checkout lyw
+```
+
+合并主分支的代码，完成这一步后你的工作分支就和主分支同步了
+
+``` bash
+$ git merge main
+```
 
 
 
