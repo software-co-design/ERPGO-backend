@@ -1,8 +1,12 @@
 # ERPGO 系统开发使用说明
 
+[TOC]
+
 ## 环境配置：
 
 git环境，自行下载配置 (不建议使用  GitDesktop)
+
+
 
 ## 本地仓库初始化配置及代码获取：
 
@@ -31,10 +35,10 @@ $ git fetch
 $ git branch -a
 ```
 
-从 origin/main 分支创建并检出 lyw (换成你自己的名字缩写)分支，作为以后你的工作分支
+从 origin/main 分支创建并检出 lyw-0430 (名字缩写-日期)分支，作为你这次的代码开发分支
 
 ```bash
-$ git checkout -b lyw origin/main
+$ git checkout -b lyw-0430 origin/main
 ```
 
 到这一步就可以看到你的 ERPGO-backend 文件夹下已经获取到代码了
@@ -43,7 +47,7 @@ $ git checkout -b lyw origin/main
 
 ## 代码编辑后推送到远程仓库：
 
-按照以下步骤一步步完成即可
+代码编辑完成后，进入git bash环境，按照以下步骤一步步完成即可
 
 将 工作区 的所有更改添加到 暂存区
 
@@ -57,23 +61,15 @@ $ git add .
 $ git commit -m "message"
 ```
 
-将本地仓库的代码推送到远程仓库，**确定当前分支是你要推送的分支**
-
-- 第一次推送，远程仓库没有你的分支，使用下面这个命令，lyw换成你的分支名
+将本地分支的代码推送到远程仓库，**确定当前分支是你要推送的分支**，lyw-0430 换成你的分支名
 
 ``` bash
-$ git push origin lyw:lyw
-```
-
-- 之后的推送，远程仓库中已有你的分支，使用下面这个命令直接推送
-
-``` bash
-$ git push
+$ git push origin lyw-0430:lyw-0430
 ```
 
 
 
-## 保持好习惯，每天编码前从仓库拉取最新代码
+## 保持好习惯，每天编码前从仓库拉取最新代码：
 
 切换到主分支main
 
@@ -87,47 +83,21 @@ $ git checkout main
 $ git pull
 ```
 
-切换到你的工作分支，lyw换成你的工作分支名
+创建并切换到新工作分支 lyw-0501 （以名称缩写-日期命名）
 
 ``` bash
-$ git checkout lyw
+$ git checkout -b lyw-0501
 ```
 
-合并主分支的代码，完成这一步后你的工作分支就和主分支同步了
+在该分支下完成代码编辑，完成任务后记得推送代码到远程仓库进行合并
 
-``` bash
-$ git merge main
-```
-
-
-
-## 创建PR 合并从分支到主分支上
-
-1.New pull request
-
-![image-20210429115442424](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210429115442424.png?lastModify=1619675799)
-
-2.确认合并的分支信息，是从你的工作分支合并到 main 分支
-
-![image-20210429115613737](C:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210429115613737.png)
+> 代码推送见目录 **代码编辑后推送到远程仓库：**
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+## 创建 Pull Request 合并你的分支
 
 
 
