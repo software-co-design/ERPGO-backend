@@ -50,9 +50,9 @@ public class JWTUtils {
     public static String geneJsonWebToken(User user) {
 
         String token = Jwts.builder().setSubject(SUBJECT)
-                .claim("head_img", user.getHeadImg())
                 .claim("id", user.getId())
-                .claim("name", user.getName())
+                .claim("username", user.getUsername())
+                .claim("realName", user.getRealName())
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRE))
                 .signWith(SignatureAlgorithm.HS256, SECRET).compact();
