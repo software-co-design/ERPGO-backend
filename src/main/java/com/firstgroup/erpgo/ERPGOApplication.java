@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.firstgroup.erpgo.mapper")
-public class GroupErpApplication {
+public class ERPGOApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GroupErpApplication.class, args);
+		SpringApplication.run(ERPGOApplication.class, args);
 	}
 
 }
