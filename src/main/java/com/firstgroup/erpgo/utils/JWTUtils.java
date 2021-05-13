@@ -1,6 +1,7 @@
 package com.firstgroup.erpgo.utils;
 
-import com.firstgroup.erpgo.model.entity.User;
+
+import com.firstgroup.erpgo.model.entity.SystemUserDO;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -44,15 +45,15 @@ public class JWTUtils {
     /**
      * 根据用户信息，生成令牌
      *
-     * @param user
+     * @param systemUserDO
      * @return
      */
-    public static String geneJsonWebToken(User user) {
+    public static String geneJsonWebToken(SystemUserDO systemUserDO) {
 
         String token = Jwts.builder().setSubject(SUBJECT)
-                .claim("id", user.getId())
-                .claim("username", user.getUsername())
-                .claim("realName", user.getRealName())
+                .claim("id", systemUserDO.getId())
+                .claim("username", systemUserDO.getUsername())
+                .claim("realName", systemUserDO.getRealName())
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRE))
                 .signWith(SignatureAlgorithm.HS256, SECRET).compact();

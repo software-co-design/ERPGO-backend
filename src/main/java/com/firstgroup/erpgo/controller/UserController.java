@@ -1,7 +1,8 @@
 package com.firstgroup.erpgo.controller;
 
 import com.firstgroup.erpgo.model.request.LoginRequest;
-import com.firstgroup.erpgo.service.UserService;
+
+import com.firstgroup.erpgo.service.SystemUserService;
 import com.firstgroup.erpgo.utils.JsonData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @Autowired
-    private UserService userService;
+    private SystemUserService systemUserService;
 
     /**
      * 登录接口
@@ -24,10 +25,7 @@ public class UserController {
      */
     @PostMapping("login")
     public JsonData login(@RequestBody LoginRequest loginRequest) {
-
-        String token = userService.findByPhoneAndPwd(loginRequest.getPhone(), loginRequest.getPwd());
-
+        String token = systemUserService.findByPhoneAndPwd(loginRequest.getPhone(), loginRequest.getPwd());
         return token == null ? JsonData.buildError("登录失败，账号密码错误") : JsonData.buildSuccess(token);
-
     }
 }
