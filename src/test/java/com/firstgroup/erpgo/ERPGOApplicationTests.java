@@ -1,12 +1,13 @@
 package com.firstgroup.erpgo;
 
+
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.firstgroup.erpgo.mapper.UserMapper;
-import com.firstgroup.erpgo.model.entity.User;
+import com.firstgroup.erpgo.mapper.SystemUserDOMapper;
+
+import com.firstgroup.erpgo.model.entity.SystemUserDO;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.Banner;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
@@ -14,12 +15,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 class ERPGOApplicationTests {
 
     @Autowired
-    private UserMapper userMapper;
+    private SystemUserDOMapper systemUserDOMapper;
 
     @Test
     void contextLoads() {
-        User user = userMapper.selectOne(new QueryWrapper<User>().eq("id", 1));
-        log.info("user: {}", user);
+
+        SystemUserDO systemUserDO = systemUserDOMapper.selectOne(new QueryWrapper<SystemUserDO>().eq("id",1));
+        log.info("user: {}", systemUserDO);
     }
 
 }

@@ -1,5 +1,5 @@
 package com.firstgroup.erpgo.service;
 
-public interface UserService {
+public interface SystemUserService {
     String findByPhoneAndPwd(String phone, String pwd);
 }
