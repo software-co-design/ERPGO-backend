@@ -20,7 +20,7 @@ class ERPGOApplicationTests {
     @Test
     void contextLoads() {
 
-        SystemUserDO systemUserDO = systemUserDOMapper.selectOne(new QueryWrapper<SystemUserDO>());
+        SystemUserDO systemUserDO = systemUserDOMapper.selectOne(new QueryWrapper<SystemUserDO>().eq("id",1));
         log.info("user: {}", systemUserDO);
     }
 
