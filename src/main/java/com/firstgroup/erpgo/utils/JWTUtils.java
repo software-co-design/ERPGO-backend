@@ -3,8 +3,10 @@ package com.firstgroup.erpgo.utils;
 
 import com.firstgroup.erpgo.model.entity.SystemUserDO;
 import io.jsonwebtoken.Claims;
+
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+
 
 import java.util.Date;
 
@@ -59,7 +61,6 @@ public class JWTUtils {
                 .signWith(SignatureAlgorithm.HS256, SECRET).compact();
 
         token = TOKEN_PREFIX + token;
-
 
         return token;
     }

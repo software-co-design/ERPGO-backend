@@ -1,16 +1,19 @@
 package com.firstgroup.erpgo.model.entity;
 
 import java.math.BigDecimal;
+
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.io.Serializable;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author lyw
@@ -26,7 +29,7 @@ public class OrderProductsDO implements Serializable {
     /**
      * 销售订单编号
      */
-      @TableId(value = "sales_order_id", type = IdType.AUTO)
+    @TableId(value = "sales_order_id", type = IdType.AUTO)
     private Integer salesOrderId;
 
     /**
@@ -57,8 +60,8 @@ public class OrderProductsDO implements Serializable {
     /**
      * 总金额
      */
-    private BigDecimal 
-totalMoney;
+    private BigDecimal
+            totalMoney;
 
 
 }
