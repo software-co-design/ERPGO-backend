@@ -17,10 +17,10 @@ public class SystemUserServiceImpl implements SystemUserService {
 
 
     @Override
-    public String findByPhoneAndPwd(String phone, String pwd) {
+    public String findByUsernameAndPwd(String username, String pwd) {
 //        User user = userMapper.findByPhoneAndPwd(phone, CommonUtils.MD5(pwd));
         SystemUserDO systemUserDO= systemUserDOMapper.selectOne(new QueryWrapper<SystemUserDO>()
-                .eq("phone", phone)
+                .eq("username", username)
                 .eq("pwd", pwd));
 
         if (systemUserDO == null) {

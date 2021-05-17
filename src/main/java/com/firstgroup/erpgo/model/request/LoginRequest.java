@@ -1,5 +1,7 @@
 package com.firstgroup.erpgo.model.request;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
@@ -8,8 +10,9 @@ import lombok.Data;
 @Data
 public class LoginRequest {
 
-    private String phone;
+    private String username;
 
+    @JsonProperty("password")
     private String pwd;
 
 }

@@ -2,15 +2,19 @@ package com.firstgroup.erpgo.model.entity;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
+
 import java.util.Date;
+
 import com.baomidou.mybatisplus.annotation.TableId;
+
 import java.io.Serializable;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author lyw
@@ -24,9 +28,9 @@ public class ProductsOutDO implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 发货单id	
+     * 发货单id
      */
-      @TableId(value = "sales_order_id", type = IdType.AUTO)
+    @TableId(value = "sales_order_id", type = IdType.AUTO)
     private Integer salesOrderId;
 
     /**
