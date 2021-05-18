@@ -38,10 +38,12 @@ public class InterceptorConfig implements WebMvcConfigurer {
          */
         registry.addInterceptor(corsInterceptor()).addPathPatterns("/**");
 
-
-        registry.addInterceptor(loginInterceptor()).addPathPatterns("/api/v1/pri/*/*/**")
-                //不拦截哪些路径   斜杠一定要加
-                .excludePathPatterns("/api/v1/pri/user/login", "/api/v1/pri/user/logout");
+        /**
+         * pri权限判断
+         */
+//        registry.addInterceptor(loginInterceptor()).addPathPatterns("/api/v1/pri/*/*/**")
+//                //不拦截哪些路径   斜杠一定要加
+//                .excludePathPatterns("/api/v1/pri/user/login", "/api/v1/pri/user/logout");
 
 
         WebMvcConfigurer.super.addInterceptors(registry);
