@@ -4,7 +4,6 @@ package com.firstgroup.erpgo;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.firstgroup.erpgo.mapper.SalesOrderDoMapper;
 import com.firstgroup.erpgo.mapper.SystemUserDOMapper;
 
 import com.firstgroup.erpgo.model.entity.SalesOrderDO;
@@ -34,7 +33,7 @@ class ERPGOApplicationTests {
     @Test
     void salesOrderPageTest(){
         Page<SalesOrderDO> mypage=new Page<>(2,2);
-        IPage<SalesOrderDO> iPage=salesOrderService.selectSalesOrderPage(mypage);
+        IPage<SalesOrderDO> iPage=salesOrderService.listSalesOrderByPage(mypage);
         System.out.println(iPage);
     }
 }

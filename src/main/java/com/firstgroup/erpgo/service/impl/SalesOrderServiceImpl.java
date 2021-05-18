@@ -17,8 +17,9 @@ import java.util.Map;
 public class SalesOrderServiceImpl implements SalesOrderService {
     @Autowired
     private SalesOrderDoMapper salesOrderDoMapper;
+
     @Override
-    public  IPage<SalesOrderDO> selectSalesOrderPage(Page<SalesOrderDO> page) {
-        return salesOrderDoMapper.selectPage(page,new QueryWrapper<SalesOrderDO>());
+    public IPage<SalesOrderDO> listSalesOrderByPage(Page<SalesOrderDO> page) {
+        return salesOrderDoMapper.selectPage(page, new QueryWrapper<SalesOrderDO>());
     }
 }

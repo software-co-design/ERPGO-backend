@@ -17,6 +17,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     /**
      * 进入到controller之前的方法
+     *
      * @param request
      * @param response
      * @param handler
@@ -48,7 +49,8 @@ public class LoginInterceptor implements HandlerInterceptor {
                 return true;
             }
 
-        }catch (Exception e){}
+        } catch (Exception e) {
+        }
 
         sendJsonMessage(response, JsonData.buildError("登录过期，重新登录"));
 
@@ -58,12 +60,13 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     /**
      * 响应json数据给前端
+     *
      * @param response
      * @param obj
      */
-    public static void sendJsonMessage(HttpServletResponse response, Object obj){
+    public static void sendJsonMessage(HttpServletResponse response, Object obj) {
 
-        try{
+        try {
             ObjectMapper objectMapper = new ObjectMapper();
 
             response.setContentType("application/json; charset=utf-8");
@@ -71,14 +74,12 @@ public class LoginInterceptor implements HandlerInterceptor {
             writer.print(objectMapper.writeValueAsString(obj));
             writer.close();
             response.flushBuffer();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
 
     }
-
-
 
 
     @Override

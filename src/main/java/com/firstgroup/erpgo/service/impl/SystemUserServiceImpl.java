@@ -19,7 +19,7 @@ public class SystemUserServiceImpl implements SystemUserService {
     @Override
     public String findByUsernameAndPwd(String username, String pwd) {
 //        User user = userMapper.findByPhoneAndPwd(phone, CommonUtils.MD5(pwd));
-        SystemUserDO systemUserDO= systemUserDOMapper.selectOne(new QueryWrapper<SystemUserDO>()
+        SystemUserDO systemUserDO = systemUserDOMapper.selectOne(new QueryWrapper<SystemUserDO>()
                 .eq("username", username)
                 .eq("pwd", pwd));
 
