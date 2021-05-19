@@ -42,7 +42,8 @@ class ERPGOApplicationTests {
 
     @Test
     void salesOrderInfoPage(){
-        List<OrderProductsDO> list=salesOrderService.listSalesOrderInfo("2");
+        List<OrderProductsDO> list=salesOrderService.listSalesOrderInfo(2);
         System.out.println(list);
+        System.out.println(salesOrderService.getSalesOrderById(2));
     }
 }

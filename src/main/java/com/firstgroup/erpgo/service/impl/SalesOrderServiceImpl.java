@@ -31,7 +31,12 @@ public class SalesOrderServiceImpl implements SalesOrderService {
     }
 
     @Override
-    public List<OrderProductsDO> listSalesOrderInfo(String saleId) {
+    public List<OrderProductsDO> listSalesOrderInfo(Integer saleId) {
         return orderProductsDoMapper.selectList(new QueryWrapper<OrderProductsDO>().eq("sales_order_id",saleId));
+    }
+
+    @Override
+    public SalesOrderDO getSalesOrderById(Integer saleId) {
+        return salesOrderDoMapper.selectOne(new QueryWrapper<SalesOrderDO>().eq("id",saleId));
     }
 }

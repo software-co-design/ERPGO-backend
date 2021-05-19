@@ -10,5 +10,6 @@ import java.util.List;
 
 public interface SalesOrderService {
     IPage<SalesOrderDO> listSalesOrderByPage(Page<SalesOrderDO> page);
-    List<OrderProductsDO> listSalesOrderInfo(String saleId);
+    List<OrderProductsDO> listSalesOrderInfo(Integer saleId);
+    SalesOrderDO getSalesOrderById(Integer saleId);
 }
