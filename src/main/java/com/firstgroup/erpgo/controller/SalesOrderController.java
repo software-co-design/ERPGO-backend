@@ -37,4 +37,5 @@ public class SalesOrderController {
             return JsonData.buildSuccess(page);
         }
     }
+
 }
