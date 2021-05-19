@@ -60,8 +60,7 @@ public class OrderProductsDO implements Serializable {
     /**
      * 总金额
      */
-    private BigDecimal
-            totalMoney;
+    private Integer totalMoney;
 
 
 }
