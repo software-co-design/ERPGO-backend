@@ -1,6 +1,4 @@
-package com.firstgroup.erpgo.model.entity;
-
-import java.math.BigDecimal;
+package com.firstgroup.erpgo.model.DO;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -13,7 +11,7 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 客户（公司）信息表
+ *
  * </p>
  *
  * @author lyw
@@ -21,8 +19,8 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("client")
-public class ClientDO implements Serializable {
+@TableName("products")
+public class ProductsDO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -30,34 +28,34 @@ public class ClientDO implements Serializable {
     private Integer id;
 
     /**
-     * 公司名称
+     * 库存商品名称
      */
-    private String companyName;
+    private String name;
 
     /**
-     * 公司地址
+     * 库存商品规格
      */
-    private String companyAddress;
+    private String specification;
 
     /**
-     * 联系人姓名
+     * 库存商品总数量
      */
-    private String linkman;
+    private Integer totalQuantity;
 
     /**
-     * 电子邮件
+     * 库存商品可用数量
      */
-    private String email;
+    private Integer availableQuantity;
 
     /**
-     * 电话号码
+     * 库存商品锁定数量
      */
-    private String phone;
+    private Integer lockedQuantity;
 
     /**
-     * 账户余额
+     * 单位
      */
-    private BigDecimal accountBalance;
+    private String unit;
 
 
 }

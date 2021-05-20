@@ -1,4 +1,4 @@
-package com.firstgroup.erpgo.model.entity;
+package com.firstgroup.erpgo.model.DO;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -22,28 +22,34 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("products_in")
-public class ProductsInDO implements Serializable {
+@TableName("products_out")
+public class ProductsOutDO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "stock_in_id", type = IdType.AUTO)
-    private Integer stockInId;
+    /**
+     * 发货单id
+     */
+    @TableId(value = "sales_order_id", type = IdType.AUTO)
+    private Integer salesOrderId;
 
+    /**
+     * 产品id
+     */
     private Integer productId;
 
     /**
-     * 入库时间
+     * 出货时间
      */
-    private Date createTime;
+    private Date outTime;
 
     /**
-     * 入库产品名称
+     * 出货产品名称
      */
     private String productName;
 
     /**
-     * 入库产品数量
+     * 出货产品数量
      */
     private Integer quantity;
 

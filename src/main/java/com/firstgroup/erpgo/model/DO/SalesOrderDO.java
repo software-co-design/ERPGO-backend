@@ -1,4 +1,4 @@
-package com.firstgroup.erpgo.model.entity;
+package com.firstgroup.erpgo.model.DO;
 
 import java.math.BigDecimal;
 
@@ -78,6 +78,11 @@ public class SalesOrderDO implements Serializable {
      * 备注
      */
     private String remarks;
+
+    /**
+     * 逻辑删除标识位
+     */
+    private Integer deleted;
 
 
 }

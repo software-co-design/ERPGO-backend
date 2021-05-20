@@ -1,4 +1,4 @@
-package com.firstgroup.erpgo.model.entity;
+package com.firstgroup.erpgo.model.DO;
 
 import com.baomidou.mybatisplus.annotation.*;
 
