@@ -1,7 +1,7 @@
 package com.firstgroup.erpgo.utils;
 
 
-import com.firstgroup.erpgo.model.entity.SystemUserDO;
+import com.firstgroup.erpgo.model.DO.SystemUserDO;
 import io.jsonwebtoken.Claims;
 
 import io.jsonwebtoken.Jwts;

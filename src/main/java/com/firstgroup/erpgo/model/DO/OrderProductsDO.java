@@ -1,10 +1,7 @@
-package com.firstgroup.erpgo.model.entity;
+package com.firstgroup.erpgo.model.DO;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
-
-import java.util.Date;
-
 import com.baomidou.mybatisplus.annotation.TableId;
 
 import java.io.Serializable;
@@ -22,41 +19,46 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("products_out")
-public class ProductsOutDO implements Serializable {
+@TableName("order_products")
+public class OrderProductsDO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 发货单id
+     * 销售订单编号
      */
     @TableId(value = "sales_order_id", type = IdType.AUTO)
     private Integer salesOrderId;
 
     /**
-     * 产品id
+     * 产品编号
      */
     private Integer productId;
 
     /**
-     * 出货时间
-     */
-    private Date outTime;
-
-    /**
-     * 出货产品名称
+     * 产品名称
      */
     private String productName;
 
     /**
-     * 出货产品数量
+     * 产品规格
      */
-    private Integer quantity;
+    private String productSpecification;
 
     /**
-     * 操作员
+     * 产品单价
      */
-    private String operator;
+    private String unitPrice;
+
+    /**
+     * 产品数量
+     */
+    private Integer productQuantity;
+
+    /**
+     * 总金额
+     */
+    private Integer totalMoney;
 
 
 }

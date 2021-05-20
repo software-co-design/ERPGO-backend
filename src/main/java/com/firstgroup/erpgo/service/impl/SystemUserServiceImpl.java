@@ -2,7 +2,7 @@ package com.firstgroup.erpgo.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.firstgroup.erpgo.mapper.SystemUserDOMapper;
-import com.firstgroup.erpgo.model.entity.SystemUserDO;
+import com.firstgroup.erpgo.model.DO.SystemUserDO;
 import com.firstgroup.erpgo.service.SystemUserService;
 import com.firstgroup.erpgo.utils.JWTUtils;
 import org.springframework.beans.factory.annotation.Autowired;

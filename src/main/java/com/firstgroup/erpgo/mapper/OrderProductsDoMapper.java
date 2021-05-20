@@ -1,8 +1,7 @@
 package com.firstgroup.erpgo.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.firstgroup.erpgo.model.entity.OrderProductsDO;
-import com.firstgroup.erpgo.model.entity.SystemUserDO;
+import com.firstgroup.erpgo.model.DO.OrderProductsDO;
 import org.springframework.stereotype.Repository;
 
 @Repository

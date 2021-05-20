@@ -1,7 +1,10 @@
-package com.firstgroup.erpgo.model.entity;
+package com.firstgroup.erpgo.model.DO;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
+
+import java.util.Date;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 
 import java.io.Serializable;
@@ -11,7 +14,7 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- *
+ * 入库单
  * </p>
  *
  * @author lyw
@@ -19,8 +22,8 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("products")
-public class ProductsDO implements Serializable {
+@TableName("stock_in")
+public class StockInDO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -28,34 +31,34 @@ public class ProductsDO implements Serializable {
     private Integer id;
 
     /**
-     * 库存商品名称
-     */
-    private String name;
-
-    /**
-     * 库存商品规格
-     */
-    private String specification;
-
-    /**
-     * 库存商品总数量
-     */
-    private Integer totalQuantity;
-
-    /**
-     * 库存商品可用数量
-     */
-    private Integer availableQuantity;
-
-    /**
-     * 库存商品锁定数量
-     */
-    private Integer lockedQuantity;
-
-    /**
-     * 单位
+     * 入库单位
      */
     private String unit;
+
+    /**
+     * 入库时间
+     */
+    private Date createTime;
+
+    /**
+     * 操作员
+     */
+    private String operator;
+
+    /**
+     * 入库状态
+     */
+    private String status;
+
+    /**
+     * 入库地址
+     */
+    private String address;
+
+    /**
+     * 备注
+     */
+    private String remarks;
 
 
 }

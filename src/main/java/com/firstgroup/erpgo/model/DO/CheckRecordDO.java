@@ -1,4 +1,6 @@
-package com.firstgroup.erpgo.model.entity;
+package com.firstgroup.erpgo.model.DO;
+
+import java.math.BigDecimal;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -14,7 +16,7 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 转账记录表
+ * 对账记录表
  * </p>
  *
  * @author lyw
@@ -22,8 +24,8 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("transfer_record")
-public class TransferRecordDO implements Serializable {
+@TableName("check_record")
+public class CheckRecordDO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -31,29 +33,29 @@ public class TransferRecordDO implements Serializable {
     private Integer id;
 
     /**
-     * 转账时间
+     * 对账记录的创建时间
      */
     private Date createTime;
 
     /**
-     * 客户id
+     * 月订单数
      */
-    private Integer clientId;
+    private Integer orderQuantity;
 
     /**
-     * 客户姓名
+     * 月销售金额
      */
-    private String clientName;
+    private BigDecimal salesAmount;
 
     /**
-     * 转账金额
+     * 月到账金额
      */
-    private Integer amount;
+    private BigDecimal arrivalAmount;
 
     /**
-     * 备注
+     * 对账操作员
      */
-    private String remarks;
+    private String operator;
 
 
 }

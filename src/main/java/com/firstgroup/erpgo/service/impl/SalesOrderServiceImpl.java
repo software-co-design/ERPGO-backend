@@ -5,17 +5,13 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.firstgroup.erpgo.mapper.OrderProductsDoMapper;
 import com.firstgroup.erpgo.mapper.SalesOrderDoMapper;
-import com.firstgroup.erpgo.model.entity.OrderProductsDO;
-import com.firstgroup.erpgo.model.entity.ProductsOutDO;
-import com.firstgroup.erpgo.model.entity.SalesOrderDO;
-import com.firstgroup.erpgo.model.entity.SystemUserDO;
+import com.firstgroup.erpgo.model.DO.OrderProductsDO;
+import com.firstgroup.erpgo.model.DO.SalesOrderDO;
 import com.firstgroup.erpgo.service.SalesOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.print.attribute.standard.OrientationRequested;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class SalesOrderServiceImpl implements SalesOrderService {
@@ -32,11 +28,32 @@ public class SalesOrderServiceImpl implements SalesOrderService {
 
     @Override
     public List<OrderProductsDO> listSalesOrderInfo(Integer saleId) {
-        return orderProductsDoMapper.selectList(new QueryWrapper<OrderProductsDO>().eq("sales_order_id",saleId));
+        return orderProductsDoMapper.selectList(new QueryWrapper<OrderProductsDO>().eq("sales_order_id", saleId));
     }
 
     @Override
     public SalesOrderDO getSalesOrderById(Integer saleId) {
-        return salesOrderDoMapper.selectOne(new QueryWrapper<SalesOrderDO>().eq("id",saleId));
+        return salesOrderDoMapper.selectOne(new QueryWrapper<SalesOrderDO>().eq("id", saleId));
     }
+
+    @Override
+    public int updateSOStatusToSuccess(Integer salesOrderId) {
+        SalesOrderDO salesOrderDO = new SalesOrderDO();
+        salesOrderDO.setStatus("审核通过");
+        return salesOrderDoMapper.update(salesOrderDO, new QueryWrapper<SalesOrderDO>().eq("id", salesOrderId));
+    }
+
+    @Override
+    public int updateSOStatusToFail(Integer salesOrderId) {
+        SalesOrderDO salesOrderDO = new SalesOrderDO();
+        salesOrderDO.setStatus("审核未通过");
+        return salesOrderDoMapper.update(salesOrderDO, new QueryWrapper<SalesOrderDO>().eq("id", salesOrderId));
+    }
+
+    @Override
+    public int logicDelSalesOrder(Integer salesOrderId) {
+        return salesOrderDoMapper.deleteById(salesOrderId);
+    }
+
+
 }

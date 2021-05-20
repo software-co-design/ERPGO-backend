@@ -1,10 +1,9 @@
-package com.firstgroup.erpgo.model.entity;
+package com.firstgroup.erpgo.model.DO;
+
+import java.math.BigDecimal;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
-
-import java.util.Date;
-
 import com.baomidou.mybatisplus.annotation.TableId;
 
 import java.io.Serializable;
@@ -14,7 +13,7 @@ import lombok.EqualsAndHashCode;
 
 /**
  * <p>
- * 入库单
+ * 客户（公司）信息表
  * </p>
  *
  * @author lyw
@@ -22,8 +21,8 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("stock_in")
-public class StockInDO implements Serializable {
+@TableName("client")
+public class ClientDO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -31,34 +30,34 @@ public class StockInDO implements Serializable {
     private Integer id;
 
     /**
-     * 入库单位
+     * 公司名称
      */
-    private String unit;
+    private String companyName;
 
     /**
-     * 入库时间
+     * 公司地址
      */
-    private Date createTime;
+    private String companyAddress;
 
     /**
-     * 操作员
+     * 联系人姓名
      */
-    private String operator;
+    private String linkman;
 
     /**
-     * 入库状态
+     * 电子邮件
      */
-    private String status;
+    private String email;
 
     /**
-     * 入库地址
+     * 电话号码
      */
-    private String address;
+    private String phone;
 
     /**
-     * 备注
+     * 账户余额
      */
-    private String remarks;
+    private BigDecimal accountBalance;
 
 
 }
