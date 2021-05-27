@@ -6,7 +6,7 @@ import lombok.Data;
  * 销售订单分页 request
  */
 @Data
-public class SalesPageRequest {
+public class PageRequest {
     //pageNum 当前页面数
     //pageSize 页面大小
     private Integer pageNum;

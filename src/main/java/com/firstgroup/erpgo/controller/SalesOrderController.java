@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.firstgroup.erpgo.model.DO.OrderProductsDO;
 import com.firstgroup.erpgo.model.DO.SalesOrderDO;
-import com.firstgroup.erpgo.model.request.SalesPageRequest;
+import com.firstgroup.erpgo.model.request.PageRequest;
 import com.firstgroup.erpgo.service.SalesOrderService;
 import com.firstgroup.erpgo.utils.JsonData;
 import lombok.extern.slf4j.Slf4j;
@@ -24,14 +24,14 @@ public class SalesOrderController {
     /**
      * 所有订单（分页查询）
      *
-     * @param salesPageRequest
+     * @param pageRequest
      * @return
      */
     @PostMapping("list")
-    public JsonData salesOrderPage(@RequestBody SalesPageRequest salesPageRequest) {
+    public JsonData salesOrderPage(@RequestBody PageRequest pageRequest) {
 
-        int pageNum = salesPageRequest.getPageNum();
-        int pageSize = salesPageRequest.getPageSize();
+        int pageNum = pageRequest.getPageNum();
+        int pageSize = pageRequest.getPageSize();
         IPage<SalesOrderDO> page = salesOrderService.listSalesOrderByPage(new Page<>(pageNum, pageSize));
 
         if (page.getSize() == 0) {
